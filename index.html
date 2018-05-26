@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+	<meta charset="utf-8"/>
+	<title>StarDuel</title>
+	<link rel="stylesheet" href="style.css"/>
+	<script src="jquery-1.11.3.min.js"></script>
+	<script src="game.js"></script>
+	<link rel="shortcut icon" href="img/starship1_idle.png"/>
+</head>
+<body>
+	<div id="preload"></div>
+	<div id="spaceship1"><div class="hpbar"><div id="hp1"></div></div><div id="en1"></div><div id="Sname1"></div></div>
+	<div id="spaceship2"><div class="hpbar"><div id="hp2"></div></div><div id="en2"></div><div id="Sname2"></div></div>
+	<div class="window" id="start">
+		<span style="font-size: 5vmin;">STARDUEL</span></br>
+		<label>
+		Lewy gracz</br>
+		<input type="text" id="name1">
+		</label>
+		<label>
+		Prawy gracz</br>
+		<input type="text" id="name2">
+		</label></br>
+		Sterowanie</br>
+		<label>
+		Lewy gracz</br></br>
+		Poruszanie się: W,S,A,D</br>
+		Strzał: Spacja
+		</label>
+		<label>
+		Prawy gracz</br></br>
+		Poruszanie się: Strzałki</br>
+		Strzał: Alt lub Ctrl
+		</label></br>
+		Pauza: P</br>
+		Reset: R</br></br>
+		Rozmiar pola bitwy zależy od wielkości okna przeglądarki</br></br>
+		<button onclick="start()">Start</button>
+		<button onclick="SI()">Walka z SI</button>
+	</div>
+	<div class="window" id="end" style="display:none;">
+		<span style="font-size: 5vmin;" id="winner"></span></br></br>
+		<button onclick="reset()">Nowa gra</button></br></br>
+		<a href="https://www.facebook.com/riddickabaddon/" target="_blank"><button>Facebook twórcy</button></a>
+	</div>
+	<div id="pause" style="display:none;">Pauza</div>
+	
+	<div id="loader"><div id="loadcircle"></div>
+</body>
+</html>
